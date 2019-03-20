@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 public abstract class LonelyTweet implements Serializable {
+    protected static final long serialVersionUID = 1L;
     protected Date tweetDate;
     protected String tweetBody;
 
@@ -35,14 +36,7 @@ public abstract class LonelyTweet implements Serializable {
         tweetBody = (String) in.readObject();
     }
 
-    public boolean isValid() {
-        if (tweetBody.trim().length() == 0
-                || tweetBody.trim().length() > 10) {
-            return false;
-        }
-
-        return true;
-    }
+    public abstract boolean isValid();
 
     @Override
     public String toString() {
