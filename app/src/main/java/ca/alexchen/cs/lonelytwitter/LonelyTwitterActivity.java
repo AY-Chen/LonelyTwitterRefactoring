@@ -48,7 +48,7 @@ public class LonelyTwitterActivity extends Activity {
 
 		//TODO: use different sub-classes (Normal or Important) based on usage of "*" in the text.
 		
-		if (tweet.isValid()) {
+		if (tweet.isValidBody()) {
 			tweets.add(tweet);
 			adapter.notifyDataSetChanged();
 

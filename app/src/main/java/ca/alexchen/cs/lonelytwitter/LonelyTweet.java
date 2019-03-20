@@ -36,7 +36,7 @@ public abstract class LonelyTweet implements Serializable {
         tweetBody = (String) in.readObject();
     }
 
-    public abstract boolean isValid();
+    public abstract boolean isValidBody();
 
     @Override
     public String toString() {
