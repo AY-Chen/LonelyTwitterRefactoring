@@ -1,4 +1,4 @@
-package ca.alexchen.cs.lonelytwitter;
+package ca.alexchen.cs.loneliertwitter;
 
 import java.util.Date;
 import java.util.List;
@@ -44,10 +44,13 @@ public class LonelyTwitterActivity extends Activity {
 
 		LonelyTweet tweet;
 
-		tweet = new NormalLonelyTweet(text, new Date());
+		if (text.contains("*")) {
+            tweet = new ImportantLonelyTweet(text, new Date());
+        }
+        else {
+            tweet = new NormalLonelyTweet(text, new Date());
+        }
 
-		//TODO: use different sub-classes (Normal or Important) based on usage of "*" in the text.
-		
 		if (tweet.isValidBody()) {
 			tweets.add(tweet);
 			adapter.notifyDataSetChanged();

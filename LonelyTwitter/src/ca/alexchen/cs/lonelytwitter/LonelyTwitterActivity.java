@@ -1,4 +1,4 @@
-package ca.alexchen.cs.lonelytwitter;
+package ca.alexchen.cs.loneliertwitter;
 
 import java.util.Date;
 import java.util.List;
