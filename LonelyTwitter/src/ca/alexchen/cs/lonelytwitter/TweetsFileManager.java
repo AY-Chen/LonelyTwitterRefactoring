@@ -1,4 +1,4 @@
-package ca.ualberta.cs.lonelytwitter;
+package ca.alexchen.cs.lonelytwitter;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
